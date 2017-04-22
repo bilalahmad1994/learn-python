@@ -141,21 +141,48 @@
 # print(other(hello()))
 #
 
+# decorators and generators
 
-def gencubes(n):
-    for i in range(n):
-        yield i**3
-for x in gencubes(10):
-    print(x)
+# def gencubes(n):
+#     for i in range(n):
+#         yield i**3
+# for x in gencubes(10):
+#     print(x)
+
+#
+# def fibonacci(n):
+#     a=1
+#     b=1
+#     for c in range(n):
+#         yield a
+#         t=a
+#         a=b
+#         b=t+a
+# for aa in fibonacci(10):
+#     print(aa)
+#
 
 
-def fibonacci(n):
-    a=1
-    b=1
-    for c in range(n):
-        yield a
-        t=a
-        a=b
-        b=t+a
-for aa in fibonacci(10):
-    print(aa)
+# def fibon(n):
+#     a=1
+#     b=1
+#     output=[]
+#     for al in range(n):
+#         output.append(a)
+#         a,b=b,b+a
+#     return output
+# print(fibon(10))
+
+
+
+def simple_gen():
+    for x in range(3):
+        yield x
+g=simple_gen()
+print(g)
+print(next(g))
+print(next(g))
+print(next(g))
+print(next(g))
+
+
