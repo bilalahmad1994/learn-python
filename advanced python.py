@@ -45,20 +45,28 @@
 
 
 
+from collections import namedtuple
+d=namedtuple('dog','name age breed bark')
+sam=d(name='aa',age=12,breed='lab',bark='shefield')
+print(sam.bark)
 
-#
-# from collections import namedtuple
-# d=namedtuple('dog','name age breed bark')
-# sam=d(name='aa',age=12,breed='lab',bark='shefield')
-# print(sam.bark)
 
-import datetime
-t=datetime.time(4,25)
-print(t)
-print(datetime.time.min)
-print(datetime.time.max)
-print(datetime.date.today())
-d1=datetime.date(2016,1,11)
-print(d1)
-d2=d1.replace(1993)
-print(d2)
+import timeit
+print('0-1-2-3-......-99')
+c=timeit.timeit('"-".join(str(n) for n in range(100))', number=10000)
+print(c)
+d=timeit.timeit('"-".join([str(n) for n in range(100)])', number=10000)
+print(d)
+
+
+
+# import datetime
+# t=datetime.time(4,25)
+# print(t)
+# print(datetime.time.min)
+# print(datetime.time.max)
+# print(datetime.date.today())
+# d1=datetime.date(2016,1,11)
+# print(d1)
+# d2=d1.replace(1993)
+# print(d2)
