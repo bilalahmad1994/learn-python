@@ -20,6 +20,7 @@
 # def __init(self)-->is init method (e.g initialize( if you are coming from other language it is called constructor)
 # when we create methods in class it recieve first instances(arguments) automatically
 
+
 # class employee():
 #     def __init__(self,first,last,pay):
 #         self.first=first
@@ -70,7 +71,6 @@ emp_2=employee('sami','ahmad',3000)
 print(emp_1.email)
 print(emp_2.email)
 print(emp_1.fullname())
-
 
 
 
